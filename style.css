@@ -3,9 +3,15 @@
   padding: 0;
 }
 
+:root {
+  --font-family-headers : 'Forum', cursive;
+  --font-family-basic : 'Inter', sans-serif;
+}
+
 body {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
+  font-family: var(--font-family-basic);
 }
 
 .wrapper {
@@ -15,16 +21,25 @@ body {
   flex-shrink: 1;
 }
 
-.nav {
+/* #region header-welcome */
+.welcome {
   height: 600px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
   background-image: url('./img/welcome.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  
 }
 
 .nav__title__item {
@@ -32,11 +47,18 @@ body {
   font-size: 30px;
   line-height: 50px;
   letter-spacing: 0.6px;
+  font-family: var(--font-family-headers);
 }
 
 .nav__menu {
   display: flex;
   gap: 30px;
+}
+
+.nav__menu li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .nav-item {
@@ -47,8 +69,30 @@ body {
 }
 
 .nav__icon__item {
+  
   width: 28px;
   height: 28px;
   margin-left: 10px;
   margin-top: 10px;
 }
+
+.header__title {
+width: 600px;
+height: 220px;
+margin-bottom: 160px;
+
+}
+
+h1 {
+color: #FFF;
+text-align: center;
+font-family: var(--font-family-headers);
+font-size: 40px;
+font-weight: 400;
+line-height: 50px;
+letter-spacing: 3px;
+text-transform: uppercase;
+margin: 35px 40px;
+background: #0C0C0E;
+}
+/* #endregion */
